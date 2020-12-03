@@ -1,0 +1,22 @@
+<html>
+<title>Blog</title>
+<body>
+	<h1>Nubi's blog</h1>
+
+	{%for post in posts %}
+
+	<div class="post">
+		<div class="date">
+			{{post.created_date}}
+		</div>
+	<a href="{% url 'post_detail' pk=post.pk %}"><h2>{{ post.title }}</h2></a>
+		<p>{{post.text}}</p>}
+	
+	</div>
+	<hr>
+
+		
+		
+	{% endfor %}
+</body>
+</html>
